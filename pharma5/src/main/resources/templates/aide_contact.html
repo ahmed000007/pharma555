@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link rel="stylesheet" type="text/css" href="/css/reclamation.css">
+<link rel="stylesheet" type="text/css" href="/css/aide_contact.css">
+
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<title>Acceuil</title>
+</head>
+<body>
+<nav class="navbar navbar-icon-top navbar-expand-lg navbar-dark bg-dark">
+<a class="nav-link" href="/" th:href="@{/acceuil}">
+  <img src="/img/pharma5.png" style="    width: 35%">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent" style="    margin-left: 16% ">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/" th:href="@{/acceuil}">
+          <i class="fa fa-home"></i>
+          Acceuil
+          <span class="sr-only">(current)</span>
+          </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/" th:href="@{/mes_commandes}">
+          Mes commandes
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/" th:href="@{/reclamation}">
+
+          Reclamation
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/" th:href="@{/aide_contact}">
+
+          Aide et contact
+        </a>
+      </li>
+            <li class="nav-item">
+        <a class="nav-link " href="#">
+
+          Tableau de bord
+        </a>
+      </li>
+    </ul>
+    <ul class="navbar-nav ">
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <i class="fa fa-bell">
+            <span class="badge badge-info">11</span>
+          </i>
+          notification
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+           <span sec:authentication="principal.lastName"> User</span> <span > </span> <span sec:authentication="principal.firstName"> User</span>
+        </a>
+      </li>
+    </ul>
+
+  </div>
+</nav>
+<h2 style="    margin-top: 1%; margin-left: 2%;">Video</h2>
+<div class="video">
+<div class="video-wrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WH1Lpi0Lh-Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</div>
+<h2 style="    margin-top: 1%; margin-left: 2%;">Documents</h2>
+
+  					<div class="form-group">
+						<div class="row">
+							<div class="col-sm-6 col-sm-offset-3">
+								<input type="submit" name="PDF" id="PDF"
+									class="form-control btn btn-primary" value="PDF" style="width: 14%;margin-left: 16%;" />
+							</div>
+							<div class="col-sm-6 col-sm-offset-3">
+									<input type="submit" name="WORD" id="WORD"
+									class="form-control btn btn-primary" value="WORD" style="width: 14%;margin-left: -73%;" />
+									</div>
+									<div class="col-sm-6 col-sm-offset-3">
+									<input type="submit" name="EXEL" id="EXEL"
+									class="form-control btn btn-primary" value="EXEL" style="width: 14%;margin-left: 45%;margin-top: -7%;"/>
+									</div>
+							</div>
+						</div>
+					</div>
+					<h2 style="    margin-top: 1%; margin-left: 2%;">Fichier produit</h2>
+
+  					<div class="form-group">
+						<div class="row">
+							<div class="col-sm-6 col-sm-offset-3">
+								<input type="submit" name="EXEL" id="EXEL"
+									class="form-control btn btn-primary" value="EXEL" style="width: 14%;margin-left: 29%;" />
+							</div>
+							</div>
+						</div>
+					</div>
+					<h2 style="margin-top: -33%;margin-left: 49%;">Contactez nous</h2>
+
+  					<div class="form-group">
+						<div class="row">
+							<div class="col-sm-6 col-sm-offset-3" style="margin-left: 55%;">
+							
+								  <label for="fname">Objet:</label>
+                                   <input type="text" id="objet" name="objet"><br><br>
+							</div>
+						<div class="box" style="margin-left: 52%;">
+                        <h1>Message</h1>
+                        <textarea name="message" id="message" placeholder="Type something..."></textarea>
+  					     <div class="form-group">
+						
+							<div class="col-sm-6 col-sm-offset-3">
+								<input type="submit" name="Envoyer" id="Envoyer"
+									class="form-control btn btn-primary" value="Envoyer" style="width: 45%;margin-left: 161%" />
+							</div>
+						
+					</div>
+</div>
+							</div>
+						</div>
+					</div>
+
+</body>
+</html>
